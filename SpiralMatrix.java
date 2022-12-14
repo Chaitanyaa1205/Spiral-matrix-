@@ -1,4 +1,4 @@
-// progam for printing elements in spiral martrix 
+// program for printing elements in spiral martrix 
 
 import java.util.*;
 
