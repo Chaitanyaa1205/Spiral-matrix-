@@ -54,7 +54,7 @@ public class SpiralMatrix{
         int m=sc.nextInt();
 
         int array[][]=new int[n][m];
-System.out.print("Enter the array elements: ");
+        System.out.print("Enter the array elements: ");
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
                 array[i][j]=sc.nextInt();
