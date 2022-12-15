@@ -4,7 +4,8 @@ import java.util.*;
 
 public class SumOfDiagonal{
 
-    public static int find(int matrix[][]){
+    //APPROACH 1 (time complaxity O(n^2))
+    public static int find1(int matrix[][]){
         int sum=0;
 
         for(int i=0;i<matrix.length;i++){
@@ -18,6 +19,18 @@ public class SumOfDiagonal{
                 }
             }
 
+        }
+        return sum;
+    }
+
+    //APPROACH 2 (Time complaxity O(n))
+    public static int find2(int matrix[][]){
+        int sum=0;
+        for(int i=0;i<matrix.length;i++){
+            sum+=matrix[i][i];       //as i==j always 
+            if(i !=matrix.length-i-1){
+                sum+=matrix[i][matrix.length-i-1];    //i+j=matrix.length-1   
+            }                                         // so , j=matrix.length-1-i 
         }
         return sum;
     }
@@ -35,7 +48,8 @@ System.out.print("Enter the array elements: ");
                 array[i][j]=sc.nextInt();
             }
         }
-        System.out.print(find(array));
+        System.out.print(find1(array));  //approach 1 
+        System.out.println(find2(array));  //approach 2
     }
     else{
         System.out.println("not possible to find for this matrix");
